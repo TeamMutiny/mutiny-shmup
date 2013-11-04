@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour {
 	public float speed;
 	public float rotationSpeed = 10.0f;
 	private float maxRotation = 50;
+	private float maxX = 25;
+	private float minX = -25;
 	private Vector3 moveDirection;
 	
 	// Use this for initialization
@@ -22,8 +24,11 @@ public class PlayerController : MonoBehaviour {
 	void Update () {
 		moveDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0.0f);
 		moveDirection *= speed;
-		playerController.Move(moveDirection * Time.deltaTime);
+		if((alus.transform.localPosition.x > maxX && Input.GetAxis("Horizontal") > 0 ) || (alus.transform.localPosition.x < minX && Input.GetAxis("Horizontal") < 0 )){ 
+			moveDirection.Set(0,moveDirection.y,moveDirection.z);
 		
+		}
+		playerController.Move(moveDirection * Time.deltaTime);
 		float rotation = rotationSpeed *Input.GetAxis("Horizontal");
 		
 		if((alus.transform.rotation.y < 0.50 && Input.GetAxis("Horizontal") < 0) || (alus.transform.rotation.y > -0.50 && Input.GetAxis("Horizontal") > 0)){ 
@@ -31,7 +36,6 @@ public class PlayerController : MonoBehaviour {
 		alus.transform.Rotate(new Vector3(0,-rotation,0));	
 		}
 		if(Input.GetAxis("Horizontal") == 0){
-			
 			if(alus.transform.rotation.y > 0 ){
 			rotation = rotationSpeed * -1;
 			}else{
