@@ -28,7 +28,7 @@ public class EnemySpawnerController : MonoBehaviour {
 		GameObject groupped =  GameObject.Find("SpawnerGroup");
 		SpawnerGroupScript scripta = groupped.GetComponent<SpawnerGroupScript>();
 		spawnInterval = scripta.spawnInterval;
-		state = State.SEQ_INTERVAL;
+		state = State.SPAWNING;
 		
 	}
 	
