@@ -1,11 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\SpawnerGroupController.cs">
     <Files>
       <File FileName="Assets\Scripts\PlayerController.cs" Line="9" Column="37" />
       <File FileName="Assets\Scripts\SpawnerGroupScript.cs" Line="1" Column="1" />
       <File FileName="Assets\SpawnerGroupController.cs" Line="3" Column="1" />
       <File FileName="Assets\Scripts\EnemySpawnerController.cs" Line="44" Column="4" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ProjectileController.cs">
+    <Files>
+      <File FileName="Assets\Scripts\ProjectileController.cs" Line="1" Column="1" />
+>>>>>>> 2e37c965cb3cd4f839854aee88ac3391273e915a
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
